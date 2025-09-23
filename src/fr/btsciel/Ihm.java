@@ -161,7 +161,7 @@ public class Ihm {
                     case "29":
                         region = new String("Meurthe-et-Moselle ou Vosges");
                         break;
-                        case "44":
+                    case "44":
                         region = new String("Oise");
                             break;
                     case "45":

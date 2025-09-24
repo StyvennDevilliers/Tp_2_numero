@@ -12,8 +12,9 @@ public class Ihm {
 
         if (numero.substring(0,3).equals("+33")) {
             numero = numero.replace("+33", "0");
-            System.out.println(numero);
         }
+
+        System.out.println(numero);
 
         if (numero.startsWith("+")) {
             switch (numero.substring(1,2)){
@@ -439,6 +440,7 @@ public class Ihm {
                             type = new String("Il s'agit d'un numéro payant, vous paierez au maximum 80 centimes d’euros par minute ou 3 euros par appel.");
                             break;
                     }
+                    System.out.println("Type de numéro : " + type);
             }
 
         }

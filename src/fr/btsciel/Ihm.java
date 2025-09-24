@@ -1,6 +1,6 @@
 package fr.btsciel;
 
-import clavier.In;
+import clavier.*;
 
 public class Ihm {
     public static void main(String[] args) {
@@ -19,58 +19,58 @@ public class Ihm {
         if (numero.startsWith("+")) {
             switch (numero.substring(1,2)){
                 case "1":
-                    provenance = new String("Ce numero provient sois du Canada sois des Etats-Unies");
+                    provenance = new String("Ce numéro provient sois du Canada sois des Etats-Unies");
                     break;
                 case "7":
-                    provenance = new String("Ce numero provient sois du Kazakhstan sois de la Russie");
+                    provenance = new String("Ce numéro provient sois du Kazakhstan sois de la Russie");
                     break;
                 case "2":
                     if (numero.substring(2,3).equals("0")){
-                        provenance = new String("Ce numero provient de l'Egypte");
+                        provenance = new String("Ce numéro provient de l'Egypte");
                     } else {
-                        provenance = new String("Ce numero provient de l'Afrique du Sud");
+                        provenance = new String("Ce numéro provient de l'Afrique du Sud");
                     }
                     break;
                 case "3":
                     switch (numero.substring(2,3)){
                         case "0":
-                            provenance = new String("Ce numero provient de la Grèce");
+                            provenance = new String("Ce numéro provient de la Grèce");
                             break;
                         case "1":
-                            provenance = new String("Ce numero provient des pays-Bas");
+                            provenance = new String("Ce numéro provient des pays-Bas");
                             break;
                         case "2":
-                            provenance = new String("Ce numero provient de la Belgique");
+                            provenance = new String("Ce numéro provient de la Belgique");
                             break;
                         case "3":
-                            provenance = new String("Ce numero provient de la France");
+                            provenance = new String("Ce numéro provient de la France");
                             break;
                         case "4":
-                            provenance = new String("Ce numero provient de l'Espagne");
+                            provenance = new String("Ce numéro provient de l'Espagne");
                             break;
                         case "6":
-                            provenance = new String("Ce numero provient de la Hongrie");
+                            provenance = new String("Ce numéro provient de la Hongrie");
                             break;
                         case "9":
-                            provenance = new String("Ce numero provient de l'Italie");
+                            provenance = new String("Ce numéro provient de l'Italie");
                             break;
                     }
                     break;
                 case "4":
                     switch (numero.substring(2,3)){
                         case "0":
-                            provenance = new String("Ce numero provient de la Roumanie");
+                            provenance = new String("Ce numéro provient de la Roumanie");
                             break;
                         case "1":
-                            provenance = new String("Ce numero provient de la Suisse");
+                            provenance = new String("Ce numéro provient de la Suisse");
                             break;
                         case "4":
-                            provenance = new String("Ce numero provient du Royaume-uni");
+                            provenance = new String("Ce numéro provient du Royaume-uni");
                             break;
                     }
                     break;
                 case "9":
-                    provenance = new String("Ce numero provient du Népal");
+                    provenance = new String("Ce numéro provient du Népal");
                     break;
             }
 

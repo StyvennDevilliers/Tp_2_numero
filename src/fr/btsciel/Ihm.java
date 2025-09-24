@@ -4,9 +4,9 @@ import clavier.In;
 
 public class Ihm {
     public static void main(String[] args) {
-        String numeroraw = new String(), numero = new String(), region = new String(), operateur = new String(), type = new String(), provenance = new String();
+        String numeroraw = new String(), numero = new String(), region = new String(), operateur = new String(), type = new String(), provenance = new String(), regionprecise = new String();
 
-        System.out.println("Saisir un numéro de téléphone à 10 chiffres:");
+        System.out.println("Saisir un numéro de téléphone:");
         numeroraw = In.readString();
         numero = numeroraw.replace(" ", "");
 
@@ -73,326 +73,323 @@ public class Ihm {
                     provenance = new String("Ce numero provient du Népal");
                     break;
             }
-            System.out.println(provenance);
+
+
 
         }else {
 
             switch (numero.substring(0,2)) {
                 case "01":
-                    System.out.println("Région parisienne");
+                    region = new String("Région parisienne");
                     switch (numero.substring(2,4)) {
                         case "34":
-                            region = new String("Yvelines ou Val-d'Oise");
+                            regionprecise = new String("Yvelines ou Val-d'Oise");
                             break;
                         case "39":
-                            region = new String("Yvelines");
+                            regionprecise = new String("Yvelines");
                             break;
                         case "40", "44", "53", "70", "72", "73", "74", "75", "77", "79", "80", "81":
-                            region = new String("Paris");
+                            regionprecise = new String("Paris");
                             break;
                         case "41":
-                            region = new String("Hauts-de-Seine ou Val-d'Oise");
+                            regionprecise = new String("Hauts-de-Seine ou Val-d'Oise");
                             break;
                         case "42":
-                            region = new String("Paris ou Hauts-de-Seine ou Seine-Saint-Denis");
+                            regionprecise = new String("Paris ou Hauts-de-Seine ou Seine-Saint-Denis");
                             break;
                         case "43", "45", "56":
-                            region = new String("Paris ou Val-de-Marne");
+                            regionprecise = new String("Paris ou Val-de-Marne");
                             break;
                         case "46":
-                            region = new String("Paris ou Essonne ou Hauts-de-Seine");
+                            regionprecise = new String("Paris ou Essonne ou Hauts-de-Seine");
                             break;
                         case "47":
-                            region = new String("Hauts-de-Seine");
+                            regionprecise = new String("Hauts-de-Seine");
                             break;
                         case "48":
-                            region = new String("Seine-Saint-Denis ou Val-de-Marne ou Val-d'Oise");
+                            regionprecise = new String("Seine-Saint-Denis ou Val-de-Marne ou Val-d'Oise");
                             break;
                         case "49":
-                            region = new String("Paris ou Hauts-de-Seine ou Val-de-Marne");
+                            regionprecise = new String("Paris ou Hauts-de-Seine ou Val-de-Marne");
                             break;
                         case "55", "76", "78":
-                            region = new String("Paris ou Hauts-de-Seine");
+                            regionprecise = new String("Paris ou Hauts-de-Seine");
                             break;
                         case "60", "64":
-                            region = new String("Seine-et-Marne");
+                            regionprecise = new String("Seine-et-Marne");
                             break;
                         case "69":
-                            region = new String("Essonne");
+                            regionprecise = new String("Essonne");
                             break;
                     }
-                    System.out.println("Région : " + region);
                     break;
                 case "02":
-                    System.out.println("Région Nord-Ouest");
+                    region = new String("Région Nord-Ouest");
                     switch (numero.substring(2, 4)) {
                         case "14", "50", "61":
-                            region = new String("Calvados ou Manche ou Orne");
+                            regionprecise = new String("Calvados ou Manche ou Orne");
                             break;
                         case "18", "34", "36", "45":
-                            region = new String("Cher ou Eure-et-Loir ou Indre ou Indre-et-Loire ou Loir-et-Cher ou Loiret");
+                            regionprecise = new String("Cher ou Eure-et-Loir ou Indre ou Indre-et-Loire ou Loir-et-Cher ou Loiret");
                             break;
                         case "22", "30", "56", "90":
-                            region = new String("Côtes-d'Armor ou Finistère ou Ille-et-Vilaine ou Morbihan");
+                            regionprecise = new String("Côtes-d'Armor ou Finistère ou Ille-et-Vilaine ou Morbihan");
                             break;
                         case "28", "40":
-                            region = new String("Loire-Atlantique");
+                            regionprecise = new String("Loire-Atlantique");
                             break;
                         case "31":
-                            region = new String("Calvados");
+                            regionprecise = new String("Calvados");
                             break;
                         case "32", "76", "77", "78":
-                            region = new String("Eure ou Seine-Maritime");
+                            regionprecise = new String("Eure ou Seine-Maritime");
                             break;
                         case "33":
-                            region = new String("Manche ou Orne");
+                            regionprecise = new String("Manche ou Orne");
                             break;
                         case "35":
-                            region = new String("Seine-Maritime");
+                            regionprecise = new String("Seine-Maritime");
                             break;
                         case "37":
-                            region = new String("Eure-et-Loir");
+                            regionprecise = new String("Eure-et-Loir");
                             break;
                         case "38":
-                            region = new String("Loiret");
+                            regionprecise = new String("Loiret");
                             break;
                         case "41":
-                            region = new String("Maine-et-Loire");
+                            regionprecise = new String("Maine-et-Loire");
                             break;
                         case "43":
-                            region = new String("Mayenne ou Sarthe");
+                            regionprecise = new String("Mayenne ou Sarthe");
                             break;
                         case "44", "53", "72":
-                            region = new String("Loire-Atlantique ou Maine-et-Loire ou Mayenne ou Sarthe ou Vendée");
+                            regionprecise = new String("Loire-Atlantique ou Maine-et-Loire ou Mayenne ou Sarthe ou Vendée");
                             break;
                         case "47":
-                            region = new String("Indre-et-Loire");
+                            regionprecise = new String("Indre-et-Loire");
                             break;
                         case "48":
-                            region = new String("Cher");
+                            regionprecise = new String("Cher");
                             break;
                         case "49":
-                            region = new String("Loire-Atlantique ou Maine-et-Loire ou Mayenne ou Sarthe ou Vendée");
+                            regionprecise = new String("Loire-Atlantique ou Maine-et-Loire ou Mayenne ou Sarthe ou Vendée");
                             break;
                         case "51":
-                            region = new String("Loire-Atlantique ou Vendée");
+                            regionprecise = new String("Loire-Atlantique ou Vendée");
                             break;
                         case "54":
-                            region = new String("Indre ou Loir-et-Cher");
+                            regionprecise = new String("Indre ou Loir-et-Cher");
                             break;
                         case "62":
-                            region = new String("La Réunion");
+                            regionprecise = new String("La Réunion");
                             break;
                         case "96":
-                            region = new String("Côtes-D'Armor");
+                            regionprecise = new String("Côtes-D'Armor");
                             break;
                         case "97":
-                            region = new String("Morbihan");
+                            regionprecise = new String("Morbihan");
                             break;
                         case "98":
-                            region = new String("Finistère");
+                            regionprecise = new String("Finistère");
                             break;
                         case "99":
-                            region = new String("Ille-et-Vaine");
+                            regionprecise = new String("Ille-et-Vaine");
                             break;
                     }
-                    System.out.println("Région : " + region);
                     break;
                 case "03":
-                    System.out.println("Région Nord-Est");
+                    region = new String("Région Nord-Est");
                     switch (numero.substring(2,4)) {
                         case "10", "51", "52":
-                            region = new String("Ardennes ou Aube ou Marne ou Haute-Marne");
+                            regionprecise = new String("Ardennes ou Aube ou Marne ou Haute-Marne");
                             break;
                         case "20", "27", "28":
-                            region = new String("Nord");
+                            regionprecise = new String("Nord");
                             break;
                         case "21":
-                            region = new String("Pas-de-Calais");
+                            regionprecise = new String("Pas-de-Calais");
                             break;
                         case "22":
-                            region = new String("Somme");
+                            regionprecise = new String("Somme");
                             break;
                         case "23":
-                            region = new String("Aisne");
+                            regionprecise = new String("Aisne");
                             break;
                         case "24":
-                            region = new String("Ardennes");
+                            regionprecise = new String("Ardennes");
                             break;
                         case "25":
-                            region = new String("Aube ou Hautes-Marne");
+                            regionprecise = new String("Aube ou Hautes-Marne");
                             break;
                         case "26":
-                            region = new String("Marne");
+                            regionprecise = new String("Marne");
                             break;
                         case "29":
-                            region = new String("Meurthe-et-Moselle ou Vosges");
+                            regionprecise = new String("Meurthe-et-Moselle ou Vosges");
                             break;
                         case "44":
-                            region = new String("Oise");
+                            regionprecise = new String("Oise");
                             break;
                         case "45":
-                            region = new String("Côte-d'Or ou Nièvre ou Saône-et-Loire ou Yonne");
+                            regionprecise = new String("Côte-d'Or ou Nièvre ou Saône-et-Loire ou Yonne");
                             break;
                         case "54", "55", "57":
-                            region = new String("Meurthe-et-Moselle ou Meuse ou Moselle ou Vosges");
+                            regionprecise = new String("Meurthe-et-Moselle ou Meuse ou Moselle ou Vosges");
                             break;
                         case "58":
-                            region = new String("Côte-d'Or ou Nièvre ou Saône-et-Loire");
+                            regionprecise = new String("Côte-d'Or ou Nièvre ou Saône-et-Loire");
                             break;
                         case "59":
-                            region = new String("Nord ou Pas-de-Calais");
+                            regionprecise = new String("Nord ou Pas-de-Calais");
                             break;
                     }
-                    System.out.println("Région : " + region);
                     break;
                 case "04":
-                    System.out.println("Région Sud-Est");
+                    region = new String("Région Sud-Est");
                     switch (numero.substring(2,4)) {
                         case "11", "30", "34":
-                            region = new String("Aude ou Gard ou Hérault ou Lozère ou Pyrénées-Orientales");
+                            regionprecise = new String("Aude ou Gard ou Hérault ou Lozère ou Pyrénées-Orientales");
                             break;
                         case "13", "86", "88":
-                            region = new String("Alpes-de-Haute-Provence ou Hautes-Alpes ou Bouches-du-Rhône ou Vaucluse");
+                            regionprecise = new String("Alpes-de-Haute-Provence ou Hautes-Alpes ou Bouches-du-Rhône ou Vaucluse");
                             break;
                         case "15", "43", "63":
-                            region = new String("Allier ou Cantal ou Haute-Loire ou Puy-de-Dôme");
+                            regionprecise = new String("Allier ou Cantal ou Haute-Loire ou Puy-de-Dôme");
                             break;
                         case "20":
-                            region = new String("Corse-du-Sud");
+                            regionprecise = new String("Corse-du-Sud");
                             break;
                         case "26", "27", "69", "81":
-                            region = new String("Ain ou Ardèche ou Drôme ou Loire ou Rhône");
+                            regionprecise = new String("Ain ou Ardèche ou Drôme ou Loire ou Rhône");
                             break;
                         case "42", "91":
-                            region = new String("Bouches-du-Rhône");
+                            regionprecise = new String("Bouches-du-Rhône");
                             break;
                         case "50":
-                            region = new String("Ain ou Haute-Savoie");
+                            regionprecise = new String("Ain ou Haute-Savoie");
                             break;
                         case "56", "57", "80":
-                            region = new String("Isère ou Savoie ou Haute-Savoie");
+                            regionprecise = new String("Isère ou Savoie ou Haute-Savoie");
                             break;
                         case "66":
-                            region = new String("Gard ou Lozère");
+                            regionprecise = new String("Gard ou Lozère");
                             break;
                         case "67":
-                            region = new String("Hérault");
+                            regionprecise = new String("Hérault");
                             break;
                         case "68":
-                            region = new String("Aude ou Pyrénées-Orientales");
+                            regionprecise = new String("Aude ou Pyrénées-Orientales");
                             break;
                         case "70":
-                            region = new String("Allier");
+                            regionprecise = new String("Allier");
                             break;
                         case "71":
-                            region = new String("Cantal ou Haute-Loire");
+                            regionprecise = new String("Cantal ou Haute-Loire");
                             break;
                         case "72", "78":
-                            region = new String("Rhône");
+                            regionprecise = new String("Rhône");
                             break;
                         case "73":
-                            region = new String("Puy-de-Dôme");
+                            regionprecise = new String("Puy-de-Dôme");
                             break;
                         case "74":
-                            region = new String("Ain");
+                            regionprecise = new String("Ain");
                             break;
                         case "75":
-                            region = new String("Ardèche ou Drôme");
+                            regionprecise = new String("Ardèche ou Drôme");
                             break;
                         case "76":
-                            region = new String("Isère");
+                            regionprecise = new String("Isère");
                             break;
                         case "77":
-                            region = new String("Loire");
+                            regionprecise = new String("Loire");
                             break;
                         case "79":
-                            region = new String("Savoie");
+                            regionprecise = new String("Savoie");
                             break;
                         case "83", "89":
-                            region = new String("Alpes-Maritimes ou Var");
+                            regionprecise = new String("Alpes-Maritimes ou Var");
                             break;
                         case "90":
-                            region = new String("Bouche-du-Rhône ou Vaucluse");
+                            regionprecise = new String("Bouche-du-Rhône ou Vaucluse");
                             break;
                         case "92":
-                            region = new String("Alpes-de-Haute-Provence ou Hautes-Alpes ou Var");
+                            regionprecise = new String("Alpes-de-Haute-Provence ou Hautes-Alpes ou Var");
                             break;
                         case "93", "97":
-                            region = new String("Alpes-Maritimes");
+                            regionprecise = new String("Alpes-Maritimes");
                             break;
                         case "94":
-                            region = new String("Var");
+                            regionprecise = new String("Var");
                             break;
                         case "95":
-                            region = new String("Haute-Corse");
+                            regionprecise = new String("Haute-Corse");
                             break;
 
                     }
-                    System.out.println("Région : " + region);
                     break;
                 case "05":
-                    System.out.println("Région Sud-Ouest");
+                    region = new String("Région Sud-Ouest");
                     switch (numero.substring(2,4)) {
                         case "16", "17", "79":
-                            region = new String("Charente ou Charente-Maritime ou Deux-Sèvres ou Vienne");
+                            regionprecise = new String("Charente ou Charente-Maritime ou Deux-Sèvres ou Vienne");
                             break;
                         case "19", "55", "87":
-                            region = new String("Corrèze ou Creuse ou Haute-Vienne");
+                            regionprecise = new String("Corrèze ou Creuse ou Haute-Vienne");
                             break;
                         case "24", "33", "40", "47":
-                            region = new String("Dordogne ou Gironde ou Landes ou Lot-et-Garonne ou Pyrénées-Atlantiques");
+                            regionprecise = new String("Dordogne ou Gironde ou Landes ou Lot-et-Garonne ou Pyrénées-Atlantiques");
                             break;
                         case "31", "67", "81":
-                            region = new String("Ariège ou Aveyron ou Haute-Garonne ou Gers ou Lot ou Hautes-Pyrénées ou Tarn ou Tarn-et-Garonne");
+                            regionprecise = new String("Ariège ou Aveyron ou Haute-Garonne ou Gers ou Lot ou Hautes-Pyrénées ou Tarn ou Tarn-et-Garonne");
                             break;
                         case "34":
-                            region = new String("Haute-Garonne");
+                            regionprecise = new String("Haute-Garonne");
                             break;
                         case "45":
-                            region = new String("Charente");
+                            regionprecise = new String("Charente");
                             break;
                         case "46":
-                            region = new String("Charente-Maritime");
+                            regionprecise = new String("Charente-Maritime");
                             break;
                         case "49":
-                            region = new String("Deux-Sèvres ou Vienne");
+                            regionprecise = new String("Deux-Sèvres ou Vienne");
                             break;
                         case "53":
-                            region = new String("Dordogne et Lot-et-Garonne");
+                            regionprecise = new String("Dordogne et Lot-et-Garonne");
                             break;
                         case "56", "57":
-                            region = new String("Gironde");
+                            regionprecise = new String("Gironde");
                             break;
                         case "58":
-                            region = new String("Landes");
+                            regionprecise = new String("Landes");
                             break;
                         case "59":
-                            region = new String("Pyrénées-Atlantiques");
+                            regionprecise = new String("Pyrénées-Atlantiques");
                             break;
                         case "61":
-                            region = new String("Ariège ou Haute-Garonne ou GErs ou Hautes-Pyrénées");
+                            regionprecise = new String("Ariège ou Haute-Garonne ou GErs ou Hautes-Pyrénées");
                             break;
                         case "62":
-                            region = new String("Haute-Garonne ou GErs ou Hautes-Pyrénées");
+                            regionprecise = new String("Haute-Garonne ou GErs ou Hautes-Pyrénées");
                             break;
                         case "63":
-                            region = new String("Tarn ou Tarn-et-Garonne");
+                            regionprecise = new String("Tarn ou Tarn-et-Garonne");
                             break;
                         case "65":
-                            region = new String("Aveyron ou Lot");
+                            regionprecise = new String("Aveyron ou Lot");
                             break;
                         case "90":
-                            region = new String("Guadeloupe");
+                            regionprecise = new String("Guadeloupe");
                             break;
                         case "94":
-                            region = new String("Guyanne");
+                            regionprecise = new String("Guyanne");
                             break;
                         case "96":
-                            region = new String("Martinique");
+                            regionprecise = new String("Martinique");
                             break;
                     }
-                    System.out.println("Région : " + region);
+
                     break;
                 case "06":
                     switch (numero.substring(2,4)) {
@@ -414,13 +411,13 @@ public class Ihm {
                             operateur = new String("Bouygues Telecom");
                             break;
                     }
-                    System.out.println("Opérateur : " + operateur);
+
                     break;
                 case "07":
-                    System.out.println("Il s'agit d'un numéro de portable.");
+                    type = new String("Il s'agit d'un numéro de portable.");
                     break;
                 case "09":
-                    System.out.println("Il s'agit de la voix sur IP");
+                    type = new String("Il s'agit de la voix sur IP");
                     break;
                 case "08":
                     switch (numero.substring(2,4)) {
@@ -440,8 +437,27 @@ public class Ihm {
                             type = new String("Il s'agit d'un numéro payant, vous paierez au maximum 80 centimes d’euros par minute ou 3 euros par appel.");
                             break;
                     }
-                    System.out.println("Type de numéro : " + type);
+                    break;
+                case "30","31":
+                    type = new String("Il s'agit d'un numéros courts à tarification gratuite");
+                    break;
+                case "32","33","34","35","36","37","38","39":
+                    type = new String("Il s'agit d'un numéros courts à tarification banalisée ou majorée (inférieur à 0.8 € la minute ou 3 € l'appel)");
+                    break;
+                case "10":
+                    type = new String("Il s'agit d'un numéros courts d'assistance opérateur (inférieur à 0.8 € la minute ou 3 € l'appel)");
+                    break;
+                default:
+                    if (numero.substring(0,3).equals("118")) {
+                        type = new String("Il s'agit d'un numéros courts de renseignements téléphoniques prix libre");
+                    }
             }
+            System.out.println("Provenance: " + provenance);
+            System.out.println("Région: " + region);
+            System.out.println("Région précise: " + regionprecise);
+            System.out.println("Opérateur: " + operateur);
+            System.out.println("Type de numéro: " + type);
+
 
         }
     }

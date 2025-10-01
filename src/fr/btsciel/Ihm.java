@@ -42,9 +42,6 @@ public class Ihm {
                         case "2":
                             provenance = new String("Ce numéro provient de la Belgique");
                             break;
-                        case "3":
-                            provenance = new String("Ce numéro provient de la France");
-                            break;
                         case "4":
                             provenance = new String("Ce numéro provient de l'Espagne");
                             break;
@@ -53,6 +50,9 @@ public class Ihm {
                             break;
                         case "9":
                             provenance = new String("Ce numéro provient de l'Italie");
+                            break;
+                        default:
+                            provenance = new String("Inconnu");
                             break;
                     }
                     break;
@@ -67,17 +67,33 @@ public class Ihm {
                         case "4":
                             provenance = new String("Ce numéro provient du Royaume-uni");
                             break;
+                        default:
+                            provenance = new String("Inconnu");
+                            break;
                     }
                     break;
                 case "9":
                     provenance = new String("Ce numéro provient du Népal");
                     break;
+                default:
+                    provenance = new String("Inconnu");
+                    break;
             }
-
-
-
+            System.out.println("Provenance: " + provenance);
         }else {
-
+            if (numeroraw.substring(0, 1).equals("0")) {
+                provenance = new String("Ce numéro provient de la France");
+                region = new String("Inconnu");
+                regionprecise = new String("Inconnu");
+                operateur = new String("Le numéro n'est pas un 06 ou un 07, il n'a donc pas d'opérateur.");
+                type = new String("Le numéro est un numéro quelconque.");
+            }else {
+                provenance = new String("Inconnu");
+                region = new String("Inconnu");
+                regionprecise = new String("Inconnu");
+                operateur = new String("Inconnu");
+                type = new String("Inconnu");
+            }
             switch (numero.substring(0,2)) {
                 case "01":
                     region = new String("Région parisienne");
@@ -120,6 +136,9 @@ public class Ihm {
                             break;
                         case "69":
                             regionprecise = new String("Essonne");
+                            break;
+                        default:
+                            regionprecise = new String("Inconnu");
                             break;
                     }
                     break;
@@ -195,6 +214,9 @@ public class Ihm {
                         case "99":
                             regionprecise = new String("Ille-et-Vaine");
                             break;
+                        default:
+                            regionprecise = new String("Inconnu");
+                            break;
                     }
                     break;
                 case "03":
@@ -242,10 +264,14 @@ public class Ihm {
                         case "59":
                             regionprecise = new String("Nord ou Pas-de-Calais");
                             break;
+                        default:
+                            regionprecise = new String("Inconnu");
+                            break;
                     }
                     break;
                 case "04":
                     region = new String("Région Sud-Est");
+
                     switch (numero.substring(2,4)) {
                         case "11", "30", "34":
                             regionprecise = new String("Aude ou Gard ou Hérault ou Lozère ou Pyrénées-Orientales");
@@ -325,7 +351,9 @@ public class Ihm {
                         case "95":
                             regionprecise = new String("Haute-Corse");
                             break;
-
+                        default:
+                            regionprecise = new String("Inconnu");
+                            break;
                     }
                     break;
                 case "05":
@@ -388,6 +416,9 @@ public class Ihm {
                         case "96":
                             regionprecise = new String("Martinique");
                             break;
+                        default:
+                            regionprecise = new String("Inconnu");
+                            break;
                     }
 
                     break;
@@ -409,6 +440,9 @@ public class Ihm {
                             break;
                         case "50", "53", "58", "59", "60", "61", "62", "63", "64", "65", "67", "68", "69", "98", "99":
                             operateur = new String("Bouygues Telecom");
+                            break;
+                        default:
+                            operateur = new String("Inconnu");
                             break;
                     }
 
@@ -451,14 +485,13 @@ public class Ihm {
                     if (numero.substring(0,3).equals("118")) {
                         type = new String("Il s'agit d'un numéros courts de renseignements téléphoniques prix libre");
                     }
+                    break;
             }
             System.out.println("Provenance: " + provenance);
             System.out.println("Région: " + region);
             System.out.println("Région précise: " + regionprecise);
             System.out.println("Opérateur: " + operateur);
             System.out.println("Type de numéro: " + type);
-
-
         }
     }
 }

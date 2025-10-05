@@ -81,7 +81,7 @@ public class Ihm {
             }
             System.out.println("Provenance: " + provenance);
         }else {
-            if (numeroraw.substring(0, 1).equals("0")) {
+            if (numero.startsWith("0")) {
                 provenance = new String("Ce numéro provient de la France");
                 region = new String("Inconnu");
                 regionprecise = new String("Inconnu");
